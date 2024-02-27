@@ -1,7 +1,7 @@
 const express = require("express")
 const https = require("https")
 const fs = require("fs")
-const startup = require("./routes/startup")
+const studentInformation = require("./routes/studentInformation")
 
 const app = express()
 
@@ -12,9 +12,8 @@ const httpsOptions = {
 
 const server = https.createServer(httpsOptions, app)
 app.use(express.json())
-app.use("/https-web-service/v1", startup)
-
+app.use("/", studentInformation)
 
 server.listen(8000, () => {
-  console.log("server is up")
+  console.log("Server Running")
 })

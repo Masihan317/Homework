@@ -1,31 +1,5 @@
 [
   {
-    "student_id": "",
-    "first_name": "",
-    "last_name": "",
-    "degree": "MSCS",
-    "trimester": 3,
-    "courses": [
-      {
-        "course_id": "CS648",
-        "course_name": "Web Service with REST"
-      },
-      {
-        "course_id": "",
-        "course_name": ""
-      },
-      {
-        "course_id": "",
-        "course_name": ""
-      }
-    ],
-    "address": {
-      "city": "Fremont",
-      "state": "CA",
-      "zip": "12345"
-    }
-  },
-  {
     "student_id": "19938",
     "first_name": "Akshaykumar",
     "last_name": "Patel",

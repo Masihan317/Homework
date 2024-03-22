@@ -1,8 +1,7 @@
 import express from 'express'
+import axios from 'axios'
 
 const githubRoutes = express.Router()
-let data = await import("../data/githubSettings.json", { assert: { type: 'json' } })
-data = data.default
 
 const findRecursively = (object, searchKey) => {
   if (object.hasOwnProperty(searchKey)) {
@@ -19,9 +18,11 @@ const findRecursively = (object, searchKey) => {
   return null;
 };
 
-githubRoutes.post("/", (req, res) => {
+githubRoutes.post("/", async (req, res) => {
   try {
     const { searchQuery } = req.body
+    const rawData = await axios.get("https://raw.githubusercontent.com/Masihan317/CS548-API/main/githubSettings.json")
+    const data = rawData.data
     const result = findRecursively(data, searchQuery)
 
     if (result === undefined) {

@@ -31,6 +31,15 @@ input {
   background-color: #EEEEEE;
 }
 
+p {
+  color: #76ABAE;
+  background-color: #31363F;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
 .logo {
   font-size: 50px;
   color: #222831;

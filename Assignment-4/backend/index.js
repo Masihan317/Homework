@@ -1,6 +1,7 @@
 import express from 'express'
 import https from 'https'
 import fs from 'fs'
+import cors from 'cors'
 import githubRoutes from './routes/githubRoutes.js'
 
 const app = express()
@@ -12,6 +13,7 @@ const httpsOptions = {
 
 const server = https.createServer(httpsOptions, app)
 
+app.use(cors())
 app.use(express.json())
 app.use("/", githubRoutes)
 

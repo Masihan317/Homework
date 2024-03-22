@@ -1,6 +1,7 @@
 import express from 'express'
 import https from 'https'
 import fs from 'fs'
+import githubRoutes from './routes/githubRoutes.js'
 
 const app = express()
 
@@ -10,6 +11,9 @@ const httpsOptions = {
 }
 
 const server = https.createServer(httpsOptions, app)
+
+app.use(express.json())
+app.use("/", githubRoutes)
 
 server.listen(8000, () => {
   console.log("Server is Up")

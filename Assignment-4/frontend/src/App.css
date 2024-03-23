@@ -7,6 +7,11 @@ html, body {
   background-color: #222831;
 }
 
+.container {
+  text-align: center;
+  width: full;
+}
+
 form {
   background-color: #76ABAE;
   border-radius: 12px;
@@ -17,7 +22,6 @@ form {
 }
 
 button {
-  width: full;
   font-size: 30px;
   background-color: #31363F;
   color: #76ABAE;
@@ -31,13 +35,21 @@ input {
   background-color: #EEEEEE;
 }
 
+.results {
+  margin-top: 20px;
+  background-color: #31363F;;
+  border-radius: 12px;
+  padding: 2px;
+  max-width: 725px;
+  max-height: 500px;
+  overflow: auto;
+}
+
 p {
   color: #76ABAE;
-  background-color: #31363F;
-  border-radius: 10px;
-  padding: 10px;
   text-align: center;
   font-size: 24px;
+  overflow: auto;
 }
 
 .logo {
